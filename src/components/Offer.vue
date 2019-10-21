@@ -14,31 +14,40 @@
       </p>
     </div>
     <p>“Вам стоит узнать, как это монетизировать!”</p>
-    <button class="btn">ЗАПИСАТЬСЯ</button>
+    <button class="btn" v-scroll-to="{
+        el: '.contacts',
+        offset: -50,
+        duration: 1100
+      }">ЗАПИСАТЬСЯ</button>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .offer {
   height: 100vh;
-  background: url("../assets/1bg.jpg") 100% auto;
+  background: url("../assets/1bg.jpg");
+  background-size: 100% 100%;
   position: relative;
   display: flex;
   justify-content: center;
+  background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
+  width: calc(100% - 112px);
+  padding: 24px 56px;
+
 
   .info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 64px 0;
-    width: 50%;
+    min-width: 50%;
 
     span {
       text-transform: uppercase;
-      font-size: 36px;
-      line-height: 46px;
+      font-size: 30px;
+      line-height: 38px;
     }
   }
 
@@ -52,26 +61,28 @@
     margin: 36px 0;
 
     hr {
-      width: 80%;
+      width: 90%;
       border: 1px solid #e52600;
     }
 
     .head {
-      font-size: 64px !important;
-      line-height: 81px !important;
+      font-size: 56px !important;
+      line-height: 60px !important;
+      margin-bottom: 0;
     }
 
     p {
       margin: 0;
       padding: 0;
-      font-size: 30px;
+      font-size: 24px;
       line-height: 38px;
     }
   }
 
   p {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 30px;
+    margin: 64px 0;
   }
 }
 </style>

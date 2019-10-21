@@ -6,8 +6,8 @@
         <div class="icon">
           <svg
             width="64"
-            height="80"
-            viewBox="0 0 64 80"
+            height="64"
+            viewBox="0 0 64 64"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -45,10 +45,10 @@
             />
           </svg>
         </div>
-        <p class="content">
+        <span class="content">
           Как отстраиваться от конкурентов с помощью личного бренда, формировать
           лояльность и доверие с первого контакта.
-        </p>
+        </span>
       </div>
       <div class="case">
         <div class="icon">
@@ -162,39 +162,55 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background: url("../assets/2bg.jpg");
+  background-size: 100% 100%;
+  position: relative;
 
   .header {
-    font-size: 48px;
+    font-size: 56px;
     line-height: 61px;
+    margin-bottom: 64px;
   }
 
   .cases-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 30% 30%;
-    justify-items: center;
-    align-content: center;
+    display: flex;
+    height: 70%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
 
     .case {
-      padding: 8px;
-      width: 80%;
+      padding: 16px;
+      width: 20%;
+      height: 35%;
+      margin: 2% 5%;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 40px;
       position: relative;
       display: flex;
+      justify-content: center;
       align-items: center;
 
       .icon {
-        background: #e52600;
+        background: #E52600;
         border-radius: 50%;
-        width: 82px;
-        height: 52px;
+        width: 88px;
+        height: 88px;
         position: absolute;
-        top: -41px;
-        left: calc(50% - 26px);
+        top: -44px;
+        left: calc(50% - 44px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .content {
         font-size: 24px;
-        line-height: 30px;
+        line-height: 25px;
         padding: 0;
         margin: 0;
       }

@@ -11,8 +11,8 @@
           интернет-маркетинга «Беркана», (г.Владивосток)
         </p>
       </div>
-      <div class="speaker main">
-        <img src="../assets/2spk.jpg" alt="" />
+      <div class="speaker">
+        <img style="transform: scale(1.1)" src="../assets/2spk.jpg" alt="" />
         <p class="name">Татьяна Зяблицкая</p>
         <hr />
         <p class="info">
@@ -25,7 +25,7 @@
         <p class="name">Любавская Наталия</p>
         <hr />
         <p class="info">
-          Агентство интернет-маркетинга «Беркана», (г.Владивосток)
+         Агентство интернет-маркетинга «Беркана», (г.Владивосток)
         </p>
       </div>
     </div>
@@ -39,6 +39,11 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
+  background: url("../assets/3bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
 
   .header {
     font-size: 64px;
@@ -49,19 +54,20 @@
   .speakers-box {
     display: flex;
     width: 100%;
+    height: 80%;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 
     .speaker {
-      position: relative;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex-direction: column;
+      width: 30%;      
 
       img {
-        width: 400px;
-        height: 480px;
+        width: 70%;
       }
 
       main {

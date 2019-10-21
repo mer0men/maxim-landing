@@ -21,7 +21,7 @@
         placeholder="Номер телефона"
       />
     </div>
-    <button class="btn">записаться</button>
+    <button class="btn" @click="send">записаться</button>
     <div class="contact-info">
       <div class="item">
         <svg
@@ -65,6 +65,11 @@ export default {
       number: "",
       email: ""
     };
+  },
+  methods: {
+    send() {
+      // TODO запрос на сервер. доступ к полям через this.поле 
+    }
   }
 };
 </script>
@@ -76,24 +81,30 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background: url("../assets/4bg.jpg");
+  background-size: 100% 100%;
+  position: relative;
 
   .info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 64px 0;
-    width: 50%;
+    margin: 128px 0 0;
+    min-width: 50%;
 
     span {
       text-transform: uppercase;
-      font-size: 36px;
-      line-height: 46px;
+      font-size: 30px;
+      line-height: 30px;
     }
   }
 
   .price {
     font-size: 30px;
     line-height: 38px;
+    margin: 32px 0 128px;
   }
 
   .form {
@@ -101,16 +112,36 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin: 16px 0;
 
     input {
-      width: 20%;
+      width: 25%;
       border: 0;
+      height: 40px;
       border-bottom: 5px solid #e52600 !important;
-      margin: 8px 0;
+      border-top: 0px solid #e52600 !important;
+      border-left: 0px solid #e52600 !important;
+      border-right: 0px solid #e52600 !important;
+
+      margin: 12px 0;
+      background: rgba($color: #000, $alpha: 0);
+      padding: 0 16px;
+      position: relative;
+      transition: 0.4s;
+
+      &:focus {
+        outline: 0;
+        border: 5px solid #e52600 !important;
+        margin: 9.5px 0;
+      }
 
       &:active {
-        outline: 0;
+        border: 5px solid #e52600 !important;
+        margin: 9.5px 0;
       }
+
+      
     }
   }
 
@@ -120,12 +151,17 @@ export default {
     align-items: center;
     font-size: 24px;
     line-height: 30px;
-    width: 20%;
+    min-width: 30%;
+    margin: 32px 0;
 
     .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       svg {
         width: 25px;
         height: 25px;
+        margin: 8px;
       }
     }
   }

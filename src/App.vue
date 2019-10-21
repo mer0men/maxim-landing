@@ -41,23 +41,32 @@ html {
 
 #app {
   font-family: "permian", sans-serif;
-  margin: 24px 56px;
   background: white;
   position: relative;
 }
 
 .btn {
-  width: 20%;
+  width: 30%;
+  height: 65px;
   background: white;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 38px;
   color: #e52600;
   border: 1px solid #e52600;
   box-sizing: border-box;
   border-radius: 60px;
+  text-transform: lowercase;
+  margin: 8px;
+  transition: 0.4s;
+  cursor: pointer;
 
   &:focus {
     outline: 0;
+  }
+
+  &:hover {
+    background: #e52600;
+    color: white;
   }
 }
 </style>
